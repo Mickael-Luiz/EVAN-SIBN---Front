@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 export class ButtonComponent {
 
   @Input() text: string = ''
+  @Input() shadow: boolean = false
 
 }

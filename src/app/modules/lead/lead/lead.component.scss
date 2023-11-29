@@ -3,6 +3,68 @@
   width: 100%;
 
   .content-lead {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     padding: 0 60px;
+
+    .legenda {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+
+      .card-legenda {
+        height: 110px;
+        width: 330px;
+        background-color: #F2F2F2;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, .35);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+
+        .display {
+          height: 80px;
+          width: 75px;
+          background-color: #555555;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 3em;
+          color: white;
+          transform: translateX(-55px);
+        }
+
+        span {
+          font-size: 14pt;
+        }
+      }
+
+    }
+
+    .filter {
+
+      form {
+        display: flex;
+
+        .filter-field {
+          display: flex;
+          flex-direction: column;
+          padding: 10px;
+          justify-content: flex-end;
+
+          input {
+            width: 100%;
+            border-radius: 3px;
+            border: 1px solid #b3b3b3;
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, .35);
+            height: 30px;
+          }
+
+        }
+      }
+    }
   }
 }

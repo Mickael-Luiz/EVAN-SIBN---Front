@@ -2,9 +2,13 @@ button {
   color: white;
   background-color: #FF7900;
   height: 30px;
-  width: 120px;
+  min-width: 120px;
   border: none;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.shadow-btn {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, .35);
 }

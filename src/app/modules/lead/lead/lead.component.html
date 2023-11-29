@@ -3,5 +3,54 @@
   <div class="content-lead">
     <app-button [text]="'Novo Contato'"></app-button>
 
+    <div class="legenda">
+      <div class="card-legenda">
+        <div class="display" style="background-color: #555555;">
+          <p>23</p>
+        </div>
+        <span>Congelado</span>
+      </div>
+      <div class="card-legenda">
+        <div class="display" style="background-color: #4573A8;">
+          <p>27</p>
+        </div>
+        <span>Congelado</span>
+      </div>
+      <div class="card-legenda">
+        <div class="display" style="background-color: #FFDF25;">
+          <p>21</p>
+        </div>
+        <span>Congelado</span>
+      </div>
+      <div class="card-legenda">
+        <div class="display" style="background-color: #D9001B;">
+          <p>36</p>
+        </div>
+        <span>Congelado</span>
+      </div>
+    </div>
+
+    <div class="filter">
+      <form class="grid">
+
+        <div class="col col-md-5 col-lg-3 filter-field">
+          <label>Fonte</label>
+          <input placeholder="Selecionar">
+        </div>
+        <div class="col col-md-5 col-lg-3 filter-field">
+          <label>Status</label>
+          <input placeholder="Selecionar">
+        </div>
+        <div class="col col-md-5 col-lg-5 filter-field">
+          <label>Nome</label>
+          <input placeholder="Selecionar">
+        </div>
+        <div class="col col-md-5 col-lg-1 filter-field">
+          <app-button [text]="'Pesquisar'" [shadow]="true"></app-button>
+        </div>
+
+      </form>
+    </div>
+
   </div>
 </div>
