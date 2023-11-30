@@ -12,7 +12,7 @@ const routes: Routes = [
     path: 'lead', loadChildren: () => import('./modules/lead/lead.module').then(m => m.LeadModule)
   },
   {
-    path: 'pipeline', loadChildren: () => import('./modules/lead/lead.module').then(m => m.LeadModule)
+    path: 'pipeline', loadChildren: () => import('./modules/pipeline/pipeline.module').then(m => m.PipelineModule)
   }
 ];
 

@@ -17,8 +17,8 @@ export class LeadComponent {
     { column: 'Status', field: 'status', align: 'left' },
     { column: 'Telefone', field: 'phone', align: 'left' },
     { column: 'Ações', field: 'action', align: 'center', buttons: [
-      {icon: 'fa-solid fa-pen-to-square', color: 'white', backgroundColor: 'gray'},
-      {icon: 'fa-solid fa-address-card', color: 'white', backgroundColor: 'gray'}
+      {icon: 'fa-solid fa-pen-to-square', color: '#FF7900', backgroundColor: 'white'},
+      {icon: 'fa-solid fa-address-card', color: '#FF7900', backgroundColor: 'white'}
     ] },
   ]
 
