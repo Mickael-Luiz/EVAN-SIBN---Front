@@ -4,7 +4,7 @@
 
   .content-pipeline {
     display: flex;
-    gap: 30px;
+    gap: 35px;
     padding: 0 60px;
     height: 100%;
     width: 100%;
@@ -31,7 +31,7 @@
 
         span {
           position: absolute;
-          transform: translateX(125px) translateX(-20%);
+          transform: translateX(125px) translateX(-10%);
           z-index: 3;
         }
 
@@ -58,6 +58,9 @@
         transform: translateX(50%);
         z-index: 2;
       }
+      .header:hover, .header:hover::after {
+        background-color: #FF7900;
+      }
 
       .content-cards {
         display: flex;
@@ -68,7 +71,7 @@
         height: 700px;
         overflow-y: auto;
         overflow-x: hidden;
-        transform: translateX(30px);
+        transform: translateX(25px);
 
         .pipe-card {
           width: 250px;

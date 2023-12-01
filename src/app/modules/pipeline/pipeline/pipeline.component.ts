@@ -47,6 +47,10 @@ export class PipelineComponent {
     ]},
   ]
 
+  constructor() {
+    this.sortContainer()
+  }
+
   startDrag(event: any, originalContainer: string, cardId: string) {
     event.dataTransfer.setData('originalContainer', originalContainer);
     event.dataTransfer.setData('cardId', cardId);
@@ -69,7 +73,25 @@ export class PipelineComponent {
     targetContainer?.card.push(cardRemoved)
 
     this.container.find(container => container.header === origContainerHeader)?.card.filter(card => card.name !== cardID);
+    this.sortContainer()
+  }
 
+  sortContainer() {
+    this.container.forEach(container => {
+      container.card.sort((a, b) => {
+
+        const nameA = a.name.toUpperCase();
+        const nameB = b.name.toUpperCase()
+
+        if(nameA < nameB) {
+          return -1;
+        }
+        if(nameA > nameB) {
+          return 1;
+        }
+        return 0;
+      })
+    })
   }
 
 }

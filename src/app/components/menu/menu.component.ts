@@ -20,7 +20,7 @@ export class MenuComponent {
     { label: 'Teste', path: 'pipeline', icon: 'fa-solid fa-gopuram' },
   ]
 
-  toggleMenu: boolean = true
+  toggleMenu: boolean = false
 
   constructor(
     private router: Router
