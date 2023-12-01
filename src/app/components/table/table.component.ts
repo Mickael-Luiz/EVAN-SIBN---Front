@@ -12,6 +12,8 @@ export class TableComponent {
   @Input() tableData: object[] = []
 
   getProp(data: any, field: string) {
+    console.log(data[field]);
+
     return data[field]
   }
 

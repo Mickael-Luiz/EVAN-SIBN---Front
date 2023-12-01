@@ -3,6 +3,8 @@ export interface ITableInfo {
   field: string;
   buttons?: IActionColumn[];
   align?: string;
+  icon?: boolean;
+  width?: string;
 }
 
 interface IActionColumn {

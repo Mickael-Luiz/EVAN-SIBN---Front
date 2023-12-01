@@ -2,14 +2,28 @@
   <caption></caption>
   <thead>
     <tr>
-      <th *ngFor="let item of tableInfo" [style.text-align]="item.align">{{item.column}}</th>
+      <th *ngFor="let item of tableInfo" [style.text-align]="item.align" [style.width]="item.width">
+
+        <ng-container *ngIf="item.icon; else common">
+          <i [class]="item.column"></i>
+        </ng-container>
+        <ng-template #common>
+          {{item.column}}
+        </ng-template>
+
+      </th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let data of tableData">
       <td *ngFor="let item of tableInfo" [style.text-align]="item.align">
 
-        {{getProp(data, item.field)}}
+        <div *ngIf="item.field == 'temp'; else common" style="width: 100%; display: flex; justify-content: center;">
+          <div style="height: 6px; width: 16px; border-radius: 3px;" [style.background-color]="getProp(data, item.field)"></div>
+        </div>
+        <ng-template #common>
+          {{getProp(data, item.field)}}
+        </ng-template>
 
         <div *ngIf="item.field === 'action'" class="contentAction">
           <button *ngFor="let button of item.buttons" [style.background-color]="button.backgroundColor"
