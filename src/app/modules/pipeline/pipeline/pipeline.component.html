@@ -1,12 +1,12 @@
 <div class="pipeline-container">
   <app-beadcrumb></app-beadcrumb>
-  <div class="content-pipeline">
+  <div class="pipeline-content">
     <div *ngFor="let item of container" class="container-cards" (dragover)="allowDrop($event)" (drop)="drop($event, item.header)">
       <div class="header">
         <span>{{item.header}}</span>
       </div>
       <div class="content-cards">
-        <div class="pipe-card" *ngFor="let card of item.card" [ngStyle]="{'border-left': '9px solid ' + card.status}" draggable="true" (dragstart)="startDrag($event, item.header, card.name)">
+        <div class="pipe-card" *ngFor="let card of item.card" [ngStyle]="{'border-left': '9px solid ' + card.status}" draggable="true" (dragstart)="startDrag($event, item.header, card.name)" (click)="navigateTo()">
           <div>
             <span class="name-span">{{card.name}}</span>
             <span class="email-span">{{card.email}}</span>

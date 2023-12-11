@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface IContainer {
   header: string;
@@ -47,7 +48,7 @@ export class PipelineComponent {
     ]},
   ]
 
-  constructor() {
+  constructor(private router: Router) {
     this.sortContainer()
   }
 
@@ -92,6 +93,10 @@ export class PipelineComponent {
         return 0;
       })
     })
+  }
+
+  navigateTo() {
+    this.router.navigate(['pipeline/progress'])
   }
 
 }
