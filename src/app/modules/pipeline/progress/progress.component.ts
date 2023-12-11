@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./progress.component.scss']
 })
 export class ProgressComponent {
-
+  activatedComponent = 'timeline'
 }
